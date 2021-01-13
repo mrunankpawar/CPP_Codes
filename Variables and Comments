@@ -1,0 +1,14 @@
+#include<iostream>
+using namespace std;
+//This is a code written to use the variables and comments!!
+/*This
+is 
+a 
+multi
+line
+comment*/
+int main(){
+    int num = 6;
+    cout<<"Hello World !!"<<num;
+    return 0;    
+}
