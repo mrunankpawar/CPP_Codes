@@ -1,0 +1,41 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+    //****************** if-else / if - else ladder ***************** 
+    int age;
+    cout<<"What is your age?"<<endl;
+    cin>>age;
+    if(age<18){
+        cout<<"You cannot come to my party!!";
+    }
+    else if(age==18){
+        cout<<"You will get a kid pass!!";
+    }
+    else
+    {
+        cout<<"Welcome to the party!!";
+    }
+
+    //***************** switch case *****************
+    int age;
+    cout<<"Whats your age??"<<endl;
+    cin>>age;
+    switch (age)
+    {
+    case 18:
+        cout<<"You are 18";
+        break;
+
+    case 22:
+        cout<<"You are 22";
+        break;
+    
+    default:
+        cout<<"Invalid";
+        break;
+    }
+
+    return 0;
+
+}
