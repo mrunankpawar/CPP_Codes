@@ -1,0 +1,48 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+    //**********Loops in C++**************
+    //**********For Loop**************
+    //Syntax of for loop :
+    //for(initialization; condition; updation)
+    //{
+    //  for loop body (code of for loop)
+    //}
+    for (int i = 1; i <= 100; i++)
+    {
+        cout<<i<<endl;
+    }
+
+    //**********While Loop**************
+    //Syntax of while loop :
+    // while(condition)
+    // {
+    // body of while loop
+    // }
+    
+    int i = 30;
+    while (i<=40)
+    {
+        cout<<i<<endl;
+        i++;
+    }
+
+    //**********do While Loop**************
+    //Syntax of do while loop :
+    // do
+    // {
+    //  statements
+    // }
+    // while(condition);
+
+    int i = 1;
+    do
+    {
+        cout<<i<<endl;
+        i++;
+    } while (false);
+    
+    
+    return 0;
+}
