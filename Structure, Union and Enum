@@ -1,0 +1,50 @@
+#include <iostream>
+using namespace std;
+
+//****************STRUCTURE***************
+typedef struct employee
+{
+    int eId;
+    char favChar;
+    float salary;
+
+} emp;
+
+//****************UNION***************
+union money
+{
+    int rice;
+    char car;
+    float pounds;
+};
+
+int main()
+{
+
+    struct employee mrunank;
+    emp mrunank;
+    mrunank.eId = 1;
+    mrunank.favChar = 'm';
+    mrunank.salary = 100000000;
+    cout << "Mrunank's salary is : " << mrunank.salary << endl;
+    cout << "Mrunank's Employee ID is : " << mrunank.eId << endl;
+    cout << "Mrunank's favourite character is : " << mrunank.favChar << endl;
+
+    union money m1;
+    m1.rice = 34;
+    m1.car = 'm';
+    cout << m1.rice;
+
+    enum Meal
+    {
+        breakfast,
+        lunch,
+        dinner
+    };
+    Meal m1 = breakfast;
+    //cout<<m1;
+    cout << breakfast;
+    cout << lunch;
+    cout << dinner;
+    return 0;
+}
