@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+//by using the inline function the product(a,b) gets replaced by the x*y at the compile time only
+//there is no difference in the output
+inline int product(int x, int y)
+{
+    return x * y;
+}
+
+//Default arguments
+//default arguments always should be declare at the last and compulsory arguments first
+int moneyReceived(int currentMoney, float factor = 1.04)
+{
+    return currentMoney * factor;
+}
+
+int main()
+{
+
+    int a, b;
+    cout << "Enter the numbers : ";
+    cin >> a >> b;
+    cout << "The product is : " << product(a, b) << endl;
+
+    int money = 100000;
+    cout << "For regular account holders if you have " << money << "/- Rs. then you will receive " << moneyReceived(money) << " Rs. after 1 year" << endl;
+    cout << "For bank employees if you have " << money << "/- Rs. then you will receive " << moneyReceived(money, 1.10) << " Rs. after 1 year";
+
+    return 0;
+}
