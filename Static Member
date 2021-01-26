@@ -1,0 +1,50 @@
+#include <iostream>
+using namespace std;
+
+class Employee
+{
+    int id;
+    static int count;
+    //instead of static we can also write it as int count = 0; but in this case it will give 1 for all the objects
+    // and we want to share count variable throughout all the objects created by the class so it is also known as
+    //class variable or static variable
+public:
+    void setData(void)
+    {
+        cout << "Enter the ID " << endl;
+        cin >> id;
+        count++;
+    }
+    void getData(void)
+    {
+        cout << "The ID of the employee is : " << id << " and this is employee number " << count << endl;
+    }
+
+    static void getCount(void)
+    {
+        cout << "The value of count is : " << count << endl;
+    }
+};
+
+int Employee ::count; //default value is 0 //you can change the starting value of count in this line
+//int Employee :: count = 1000;
+
+int main()
+{
+    Employee e, m, p;
+    // e.id = 1;
+    // e.count = 1; //cannot do this because id and count are private members.
+    e.setData();
+    e.getData();
+    Employee::getCount();
+
+    m.setData();
+    m.getData();
+    Employee::getCount();
+
+    p.setData();
+    p.getData();
+    Employee::getCount();
+
+    return 0;
+}
