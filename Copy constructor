@@ -1,0 +1,45 @@
+#include <iostream>
+using namespace std;
+
+class Number
+{
+    int a;
+
+public:
+    Number() {}
+
+    Number(int num)
+    {
+        a = num;
+    }
+    //When no copy constructor is found compiler provides its own copy constructor
+    Number(Number &obj)
+    {
+        cout << "Copy Constructor called !!" << endl;
+        a = obj.a;
+    }
+
+    void show()
+    {
+        cout << "The number is : " << a << endl;
+    }
+};
+
+int main()
+{
+    Number n1, n2, n3(10), n5;
+    n1.show();
+    n2.show();
+    n3.show();
+
+    Number n4(n2); //Copy constructor invoked
+    n4.show();
+
+    n5 = n2; //Copy constructor not invoked because object is already created so no need of creating it
+    n5.show();
+
+    Number n6 = n3; //Copy constructor invoked
+    n6.show();
+
+    return 0;
+}
