@@ -1,0 +1,57 @@
+#include <iostream>
+using namespace std;
+
+//Base class
+class Employee
+{
+public:
+    int ID;
+    float salary;
+    Employee(int inpID)
+    {
+        ID = inpID;
+        salary = 50.0;
+    }
+    Employee() {}
+};
+
+/*
+Derived class syntax
+class {{derived-class-name}} : {{visibility-mode}} {{base-class-name}}
+{
+    body 
+} 
+
+Notes : 
+1. Default Visibility Mode is PRIVATE
+2. Private Visibility Mode : PUBLIC members of the base class become PRIVATE members of the derived class.
+3. Public Visibility Mode : PUBLIC members of the base class become PUBLIC members of the derived class.
+4. PRIVATE members of the base class cannot be inherited.
+*/
+
+//Creating a programmer class derived from class Employee
+class Programmer : public Employee
+{
+public:
+    Programmer(int inpID)
+    {
+        ID = inpID;
+    }
+    int langCode = 5;
+    void getData()
+    {
+        cout << ID << endl;
+    }
+};
+
+int main()
+{
+    Employee mrunank(1), vedant(2);
+    cout << mrunank.salary << endl;
+    cout << vedant.salary << endl;
+
+    Programmer rishi(3);
+    cout << rishi.ID << endl;
+    rishi.getData();
+    return 0;
+}
